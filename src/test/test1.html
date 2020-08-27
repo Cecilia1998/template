@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button id="b1">button</button>
+<button id="b2">button</button>
+</body>
+<script>
+
+
+function fun () {
+  console.log('fun被调用了');
+  return new Promise(function (resolve,reject) {
+
+   document.getElementById('b1').addEventListener('click',()=>{
+      resolve()
+    })
+    document.getElementById('b2').addEventListener('click',()=>{
+      reject()
+    })
+  })
+}
+
+fun().then(()=>alert('submit')).catch(()=>alert('cancel'))
+
+
+</script>
+</html>

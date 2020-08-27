@@ -1,0 +1,77 @@
+<template>
+  <div class="expandInsert">
+    <Table ref="tableExpandInsert" :max-height="300" :columns="columns" :data="row" @on-selection-change="getSelection"></Table>
+  </div>
+</template>
+
+<script>
+  export default{
+    name:"expandInsert",
+    props:{
+      row:Array,
+    },
+    data(){
+      return{
+        columns:[
+          {
+            title:"选择",
+            type:"selection",
+            width:55,
+            align:"center"
+          },
+          {
+            title:"序号",
+            type:"index",
+            key:"index",
+            align:"center"
+          },
+          {
+            title:"物料名称",
+            key:"materielName",
+            align:"center"
+          },
+          {
+            title:"单位",
+            key:"unit",
+            align:"center"
+          },
+          {
+            title:"包装规格",
+            key:"specname",
+            align:"center"
+          },
+          {
+            title:"批次号",
+            key:"batchno",
+            align:"center"
+          },
+          {
+            title:"数量",
+            key:"qty",
+            align:"center"
+          },
+          {
+            title:"仓库",
+            key:"warehouseid",
+            align:"center"
+          },
+          {
+            title:"库区",
+            key:"districtName",
+            align:"center"
+          },
+        ],
+        selected:[]
+      }
+    },
+    methods:{
+      getSelection(selection){
+        // console.log(selection)
+        this.$emit("getData",selection)
+      }
+    }
+  }
+</script>
+
+<style>
+</style>
