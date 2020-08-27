@@ -1,15 +1,12 @@
 <template>
   <div id="app">
-    <MesModal ref="mesmodal"></MesModal>
     <router-view/>
   </div>
 </template>
 
 <script>
-  import MesModal from '@/components/MesModal'
 export default {
   name: 'App',
-  components:{MesModal},
   methods:{
   }
 }

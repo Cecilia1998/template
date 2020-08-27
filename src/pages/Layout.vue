@@ -63,7 +63,6 @@
           <router-view/>
         </div>
         <!--<addOutOrder ref='addOutOrder'></addOutOrder>-->
-        <MesModal ref='mesmodal'></MesModal>
       </div>
     </div>
   </div>
@@ -77,14 +76,14 @@
   import {getTitles} from '../Util'
   import {mapActions, mapGetters} from 'vuex'
   import {routers} from '../router/router'
-  import MesModal from '../components/MesModal'
+  // import MesModal from '../components/MesModal'
   import Vue from 'vue'
   //轮询时间
   const totalDuration = 5000;
   export default {
     components: {
       //addOutOrder,
-      MesModal
+      // MesModal
       // FilterBar,
       // List
     },
@@ -247,7 +246,7 @@
         })
 
       },
-     
+
     }
   }
 </script>
